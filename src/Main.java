@@ -15,7 +15,7 @@ public class Main {
         List<String> textList = new ArrayList<>(List.of(text.split(" ")));
         List<String> strings = new ArrayList<>(List.of("welcome", "no", "hell"));
         List<String> strings1 = new ArrayList<>(List.of("welcome", "no", "hell"));
-      //  task3(strings);
+        //  task3(strings);
         task4(textList);
     }
 
@@ -41,31 +41,34 @@ public class Main {
         }
 
     }
+
     private static boolean isEven(Integer num) {
         return num % 2 == 0;
     }
+
     private static void task3(List<String> strings) {
         System.out.println(new HashSet<>(strings));
     }
-     private static void task4(List<String> strings){
+
+    private static void task4(List<String> strings) {
         Map<String, Integer> countStringByString = new HashMap<>();
-        for(String str: strings){
-          if(countStringByString.get(str) == null) {
-              countStringByString.put(str, 1);
-              System.out.println(countStringByString);
-          } else {
-              countStringByString.put(str,countStringByString.get(str)+1);
-              System.out.println(countStringByString);
-          }
+        for (String str : strings) {
+            if (countStringByString.get(str) == null) {
+                countStringByString.put(str, 1);
+                System.out.println(countStringByString);
+            } else {
+                countStringByString.put(str, countStringByString.get(str) + 1);
+                System.out.println(countStringByString);
+            }
         }
-        for (Map.Entry<String, Integer > entry :countStringByString.entrySet()){
-            if (entry.getValue()>1) {
+        for (Map.Entry<String, Integer> entry : countStringByString.entrySet()) {
+            if (entry.getValue() > 1) {
                 System.out.println(entry);
             }
-         }
-         System.out.println(countStringByString);
+        }
+        System.out.println(countStringByString);
 
-     }
+    }
 }
 
 
